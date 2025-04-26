@@ -47,5 +47,5 @@ Output:
 Combined output saved as 'output_combined.jpg'
 Result: {'RGB': {'R': 75, 'G': 50, 'B': 70}, 'Color Name': 'Dark Purple', 'Matched Skin Tones': 'Black , White', 'Visual Output': "Check 'output_combined.jpg' for Original Image, Predicted Mask, and Segmented Region"}
 
-Given Image              Original Mask                   predicted Mask
-![image](https://github.com/user-attachments/assets/e6cb0f4a-09cd-4719-8abe-4da9cdc8a48a)
+![WhatsApp Image 2025-04-07 at 13 17 14_f52eb1ea](https://github.com/user-attachments/assets/c0c90a2d-10a2-496c-bf59-22e2b3fca142)
+
