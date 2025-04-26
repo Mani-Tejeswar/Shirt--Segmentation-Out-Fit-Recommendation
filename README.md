@@ -12,13 +12,13 @@ The first step involves detecting and isolating the shirt region from an input i
 2. Dominant Color Extraction
 Once the shirt area is segmented, color analysis is performed. Using clustering algorithm K-Means the system identifies the most prominent colors present in the shirt. This step involves:
 
-Converting the image to a suitable color space RGB .
+      Converting the image to a suitable color space RGB .
 
-Applying clustering to group similar colors.
+      Applying clustering to group similar colors.
 
-Selecting the cluster centroid with the highest frequency as the "dominant color."
+      Selecting the cluster centroid with the highest frequency as the "dominant color."
 
-The extracted dominant color is represented in a standard format (e.g., HEX, RGB) for further use.
+      The extracted dominant color is represented in a standard format (e.g., HEX, RGB) for further use.
 
 3. Rule-Based Color Matching
 A small, predefined dataset maps shirt color categories to:
@@ -28,6 +28,7 @@ Specific RGB value ranges
 Recommended complementary skin color.
 
 Example structure:
+
 colors = {
 
     "Light Blue": (((150, 200), (200, 255), (220, 255)), "White, Brown"),
