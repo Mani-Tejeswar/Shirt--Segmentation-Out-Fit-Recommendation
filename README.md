@@ -29,6 +29,7 @@ Recommended complementary skin color.
 
 Example structure:
 colors = {
+
     "Light Blue": (((150, 200), (200, 255), (220, 255)), "White, Brown"),
     
     "Blue": (((0, 50), (0, 50), (150, 255)), "White, Brown"),
