@@ -8,7 +8,7 @@ This project focuses on building a pipeline that segments shirts from images, ex
 
 1. Shirt Segmentation :
 
-The first step involves detecting and isolating the shirt region from an input image. Using advanced image processing techniques or deep learning models  CNN, U-Net, the system accurately separates the shirt from the rest of the image (background, pants, accessories, etc.). This ensures that only the relevant portion — the shirt — is analyzed for color features.
+The first step involves detecting and isolating the shirt region from an input image. Using advanced deep learning models  CNN, U-Net, the system accurately separates the shirt from the rest of the image (background, pants, accessories, etc.). This ensures that only the relevant portion — the shirt — is analyzed for color features.
 
 2. Dominant Color Extraction :
    
@@ -21,7 +21,8 @@ Once the shirt area is segmented, color analysis is performed. Using clustering 
       Selecting the cluster centroid with the highest frequency as the "dominant color."
 
       The extracted dominant color is represented in a standard format (e.g., HEX, RGB) for further use.
-
+      
+      
 3. Rule-Based Color Matching :
    
         A small, predefined dataset maps shirt color categories to:
