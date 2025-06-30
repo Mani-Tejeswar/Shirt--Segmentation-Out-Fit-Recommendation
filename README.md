@@ -71,7 +71,7 @@ colors = {
 }
 ```
 
-![Output Sample](./3e76a21a-fdd4-432f-a03f-c0e64e3ce817.jpg)
+![Output Sample]("C:\Users\Mani Tejeswar Reddy\OneDrive\Documents\Unit-1-2-3 nlp\WhatsApp Image 2025-04-07 at 13.24.41_5d95fc54output.jpg")
 
 ---
 
