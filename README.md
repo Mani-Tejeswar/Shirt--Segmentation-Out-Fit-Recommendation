@@ -1,60 +1,117 @@
-# Shirt--Segmentation-Out-Fit-Recommendation
-This Project is about Shirt Segmentation and extracting shirt Dominant color &amp; Performing Outfit Recommendation From Extracted Color 
 
-Project Overview:
-Shirt Segmentation, Dominant Color Extraction, and Outfit Recommendation
+# 👕 Shirt Segmentation & Outfit Recommendation System
 
-This project focuses on building a pipeline that segments shirts from images, extracts their dominant colors, and uses this information to recommend matching outfits.
+## 🔍 Project Summary
+A complete pipeline that segments a shirt from an image, extracts its **dominant color**, and recommends suitable outfit combinations based on skin tone using a **rule-based matching system**.
 
-1. Shirt Segmentation :
+---
 
-The first step involves detecting and isolating the shirt region from an input image. Using advanced deep learning models  CNN, U-Net, the system accurately separates the shirt from the rest of the image (background, pants, accessories, etc.). This ensures that only the relevant portion — the shirt — is analyzed for color features.
+## 📌 Project Overview
+This project combines **Computer Vision**, **Deep Learning**, and **Color Theory** to:
 
-2. Dominant Color Extraction :
-   
-Once the shirt area is segmented, color analysis is performed. Using clustering algorithm K-Means the system identifies the most prominent colors present in the shirt. This step involves:
+- 🎯 Detect and segment shirts from user-uploaded images  
+- 🎨 Identify the most dominant shirt color using **K-Means clustering**  
+- 👤 Recommend matching outfits for various skin tones using a custom **rule engine**
 
-      Converting the image to a suitable color space RGB .
+---
 
-      Applying clustering to group similar colors.
+## 🧠 Core Components
 
-      Selecting the cluster centroid with the highest frequency as the "dominant color."
+### 1. 🧥 Shirt Segmentation
+Using **CNN** and **U-Net** architectures:
+- Precisely isolates the shirt area from the background.
+- Filters out non-shirt elements like pants, face, accessories, etc.
+- Generates a clean **binary mask** to highlight shirt pixels.
 
-      The extracted dominant color is represented in a standard format (e.g., HEX, RGB) for further use.
-      
-      
-3. Rule-Based Color Matching :
-   
-        A small, predefined dataset maps shirt color categories to:
+### 2. 🎨 Dominant Color Extraction
+Applies **K-Means clustering** on the segmented shirt region:
+- Converts the image to **RGB color space**
+- Groups pixels into color clusters
+- Extracts the **most frequent cluster centroid** as the dominant color
+- Outputs color in **RGB** (optionally HEX)
 
-       Specific RGB value ranges
+**Example Output:**
+```json
+{
+  "RGB": {"R": 75, "G": 50, "B": 70},
+  "Color Name": "Dark Purple"
+}
+```
 
-       Recommended complementary skin color.
+### 3. 📋 Rule-Based Color Matching System
+A predefined dataset maps shirt color categories to:
+- Expected **RGB value ranges**
+- Suggested **skin-tone matches**
 
-Example structure:
-
+```python
 colors = {
-
     "Light Blue": (((150, 200), (200, 255), (220, 255)), "White, Brown"),
-    
     "Blue": (((0, 50), (0, 50), (150, 255)), "White, Brown"),
-    
     "Dark Blue": (((0, 30), (0, 30), (80, 150)), "Brown, Black"),
-    
     ...
 }
+```
 
-Matching Process:
+---
 
-Compare the extracted dominant RGB value against all predefined ranges.
+## ✅ Matching Logic
+- Compare extracted RGB values with predefined color ranges  
+- Identify the **closest color category**  
+- Recommend matching outfits based on **skin tone compatibility**
 
-Find the closest matching shirt color category.
+---
 
-Recommend the corresponding outfit to suitable skin color options.
+## 💾 Output Example
+```json
+{
+  "RGB": {"R": 75, "G": 50, "B": 70},
+  "Color Name": "Dark Purple",
+  "Matched Skin Tones": "Black, White",
+  "Output File": "output_combined.jpg"
+}
+```
 
-Output:
-Combined output saved as 'output_combined.jpg'
-Result: {'RGB': {'R': 75, 'G': 50, 'B': 70}, 'Color Name': 'Dark Purple', 'Matched Skin Tones': 'Black , White', 'Visual Output': "Check 'output_combined.jpg' for Original Image, Predicted Mask, and Segmented Region"}
+![Output Sample](./3e76a21a-fdd4-432f-a03f-c0e64e3ce817.jpg)
 
-![WhatsApp Image 2025-04-07 at 13 17 14_f52eb1ea](https://github.com/user-attachments/assets/c0c90a2d-10a2-496c-bf59-22e2b3fca142)
+---
 
+## 🧬 Methodology
+The following diagram illustrates the entire pipeline from image upload to outfit recommendation.
+
+![Methodology](./6d0dde85-93d8-4e0b-b2cf-43d1550e3016.png)
+
+---
+
+## 🧪 Sample Visuals
+
+### Original, Mask & Segmented Output
+
+![Segmentation Result](./f1e6f788-166b-42b6-8194-07c14ff46490.png)
+
+### Dataset Sample & Masking
+
+![Dataset Description](./f2f2af19-3394-4ab2-8f63-61f95c5a65fe.png)
+
+---
+
+## 🛠️ Technologies Used
+- Python 🐍  
+- OpenCV 🎥  
+- TensorFlow / PyTorch  
+- Scikit-learn  
+- K-Means Clustering  
+- U-Net / CNN  
+- Numpy, Matplotlib
+
+---
+
+## 🚀 Future Improvements
+- Add real-time outfit recommender with camera input  
+- Build a web app using **Streamlit** or **Flask**  
+- Expand dataset to support more shirt types and colors  
+- Add HEX color representation and color-blind-friendly modes
+
+---
+
+## 🙌 Contributions
+Want to improve it? Fork the repo, make changes, and create a pull request. All contributions are welcome ✨
