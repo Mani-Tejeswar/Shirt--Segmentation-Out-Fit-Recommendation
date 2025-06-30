@@ -71,14 +71,14 @@ colors = {
 }
 ```
 
-![Output Sample](./3e76a21a-fdd4-432f-a03f-c0e64e3ce817.jpg)
+![Output Sample](./images/output_sample.jpg)
 
 ---
 
 ## 🧬 Methodology
 The following diagram illustrates the entire pipeline from image upload to outfit recommendation.
 
-![Methodology](./6d0dde85-93d8-4e0b-b2cf-43d1550e3016.png)
+![Methodology](./images/methodology.png)
 
 ---
 
@@ -86,11 +86,12 @@ The following diagram illustrates the entire pipeline from image upload to outfi
 
 ### Original, Mask & Segmented Output
 
-![Segmentation Result](./f1e6f788-166b-42b6-8194-07c14ff46490.png)
+![Segmentation Result](./images/segmentation2.png)
+
 
 ### Dataset Sample & Masking
 
-![Dataset Description](./f2f2af19-3394-4ab2-8f63-61f95c5a65fe.png)
+![Dataset Description](./images/dataset_samples.png)
 
 ---
 
